@@ -1,7 +1,7 @@
 export default {
   providers: [
     {
-      domain: 'https://adapting-tapir-20.clerk.accounts.dev',
+      domain: process.env.CLERK_FRONTEND_API_URL,
       applicationID: 'convex',
     },
   ],
