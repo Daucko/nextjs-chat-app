@@ -44,7 +44,7 @@ const handleClerkWebhook = httpAction(async (ctx, req) => {
       if (user) {
         console.log(`Updating user ${event.data.id} with: ${event.data}`);
       }
-    case 'user.updated':
+    case 'user.updated': {
       console.log('Creating/Updating User:', event.data.id);
 
       await ctx.runMutation(internal.user.create, {
@@ -55,6 +55,7 @@ const handleClerkWebhook = httpAction(async (ctx, req) => {
       });
 
       break;
+    }
     default: {
       console.log('Clerk webhook event event not supported', event.type);
     }
