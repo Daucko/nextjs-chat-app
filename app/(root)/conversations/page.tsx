@@ -1,9 +1,10 @@
 import React from 'react';
+import ConversationFallback from '../../../components/shared/conversation/ConversationFallback';
 
 type Props = {};
 
 const ConversationsPage = (props: Props) => {
-  return <div>ConversationsPage</div>;
+  return <ConversationFallback />;
 };
 
 export default ConversationsPage;

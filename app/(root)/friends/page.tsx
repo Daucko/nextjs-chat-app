@@ -1,13 +1,15 @@
 import React from 'react';
 import ItemList from '../../../components/shared/item-list/ItemList';
+import ConversationFallback from '../../../components/shared/conversation/ConversationFallback';
 
 type Props = {};
 
 const FriendsPage = (props: Props) => {
   return (
-    <div>
+    <>
       <ItemList title="Friends">Friends Page</ItemList>
-    </div>
+      <ConversationFallback />
+    </>
   );
 };
 
