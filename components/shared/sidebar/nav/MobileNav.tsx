@@ -7,9 +7,14 @@ import { Card } from '../../../ui/card';
 import { UserButton } from '@clerk/nextjs';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../../../ui/tooltip';
 import { Button } from '../../../ui/button';
+import { useConversation } from '../../../../hooks/useConversation';
 
 const MobileNav = () => {
   const paths = useNavigation();
+
+  const { isActive } = useConversation();
+
+  if (isActive) return null;
 
   return (
     <Card className="fixed bottom-4 w-[calc(100vw-32px)] flex lg:hidden items-center h-16 p-2">
