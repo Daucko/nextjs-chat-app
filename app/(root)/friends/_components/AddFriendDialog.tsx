@@ -15,7 +15,10 @@ const addFriendFormSchema = z.object({
 const AddFriendDialog = (props: Props) => {
 
   const form = useForm<z.infer<typeof addFriendFormSchema>>({
-    resolver: zodResolver(addFriendFormSchema)
+    resolver: zodResolver(addFriendFormSchema),
+    defaultValues: {
+        email: ''
+    }
   }) 
 
   return <div>AddFriendDialog</div>;
