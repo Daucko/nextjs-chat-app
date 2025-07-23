@@ -8,6 +8,7 @@ import { UserButton } from '@clerk/nextjs';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../../../ui/tooltip';
 import { Button } from '../../../ui/button';
 import { useConversation } from '../../../../hooks/useConversation';
+import { ThemeToggle } from '../../../ui/theme/theme-toggle';
 
 const MobileNav = () => {
   const paths = useNavigation();
@@ -44,6 +45,9 @@ const MobileNav = () => {
               </li>
             );
           })}
+          <li>
+            <ThemeToggle />
+          </li>
           <li>
             <UserButton />
           </li>
