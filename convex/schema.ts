@@ -13,7 +13,7 @@ export default defineSchema({
 
   request: defineTable({
     sender: v.id('users'),
-    receiver: v.id('user'),
+    receiver: v.id('users'),
   })
     .index('by_receiver', ['receiver'])
     .index('by_receiver_sender', ['receiver', 'sender']),
